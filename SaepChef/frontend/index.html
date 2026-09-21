@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="img/aa5e27436f6f22dc229b21f4f152198f-icone-plano-frontal-de-chapeu-de-chef.webp">
+    <link rel="stylesheet" href="style.css">
+    <title>SaepChef</title>
+</head>
+<body>
+    <input type="checkbox" id="modal-controle" class="modal-toggle">
+
+     <header class="header">
+        <div class="user-section">
+            <div class="profile-pic" img src="imagens_usuarios/saepChef.jpg" alt=""></div>
+            <span class="username">@SAEPChef</span>
+            <button class="btn-profile" disabled>Ver Perfil</button>
+        </div>
+
+        <div class="company-section">
+            <h1>SAEPChef</h1>
+        </div>
+
+        <div class="login-section">
+            <label for="modal-controle" class="btn-login-label">Login</label>
+        </div>
+    </header>
+
+    <main class="main-container">
+        
+        <div class="search-container">
+            <input type="text" class="search-input" placeholder="Digite o nome do chef... ex: @chef1">
+            <img src="icones/lupa.svg" alt="Buscar" class="search-icon">
+        </div>
+
+        <h2 class="section-title"></h2>
+
+        <div class="grid-recipes">
+            
+            <div class="recipe-card">
+                <img src="receitas/receita1.jpg" alt="">
+                <div class="recipe-info">
+                    <span class="recipe-title">Receita 1</span>
+                    <div class="recipe-favorites">
+                        <img src="icones/estrela.svg" alt="Favorito" class="star-icon">
+                        <span class="fav-count">12</span>
+                    </div>
+                </div>
+                <input type="file" id="arquivo-1" name="arquivo" class="file-input">
+            </div>
+
+            <div class="recipe-card">
+                <img src="receitas/receita2.jpg" alt="">
+                <div class="recipe-info">
+                    <span class="recipe-title">Receita 2</span>
+                    <div class="recipe-favorites">
+                        <img src="icones/estrela.svg" alt="Favorito" class="star-icon">
+                        <span class="fav-count">45</span>
+                    </div>
+                </div>
+                <input type="file" id="arquivo-2" name="arquivo" class="file-input">
+            </div>
+
+            <div class="recipe-card">
+                <img src="receitas/receita3.jpg" alt="">
+                <div class="recipe-info">
+                    <span class="recipe-title">Receita 3</span>
+                    <div class="recipe-favorites">
+                        <img src="icones/estrela.svg" alt="Favorito" class="star-icon">
+                        <span class="fav-count">89</span>
+                    </div>
+                </div>
+                <input type="file" id="arquivo-3" name="arquivo" class="file-input">
+            </div>
+
+            <div class="recipe-card">
+                <img src="receitas/receita4.jpg" alt="">
+                <div class="recipe-info">
+                    <span class="recipe-title">Receita 4</span>
+                    <div class="recipe-favorites">
+                        <img src="icones/estrela.svg" alt="Favorito" class="star-icon">
+                        <span class="fav-count">89</span>
+                    </div>
+                </div>
+                <input type="file" id="arquivo-3" name="arquivo" class="file-input">
+            </div>
+
+            <div class="recipe-card">
+                <img src="receitas/receita5.jpg" alt="">
+                <div class="recipe-info">
+                    <span class="recipe-title">Receita 5</span>
+                    <div class="recipe-favorites">
+                        <img src="icones/estrela.svg" alt="Favorito" class="star-icon">
+                        <span class="fav-count">89</span>
+                    </div>
+                </div>
+                <input type="file" id="arquivo-3" name="arquivo" class="file-input">
+            </div>
+
+            <div class="recipe-card">
+                <img src="receitas/receita6.jpg" alt="">
+                <div class="recipe-info">
+                    <span class="recipe-title">Receita 6</span>
+                    <div class="recipe-favorites">
+                        <img src="icones/estrela.svg" alt="Favorito" class="star-icon">
+                        <span class="fav-count">89</span>
+                    </div>
+                </div>
+                <input type="file" id="arquivo-3" name="arquivo" class="file-input">
+            </div>
+
+            <div class="recipe-card">
+                <img src="receitas/receita7.jpg" alt="receitas">
+                <div class="recipe-info">
+                    <span class="recipe-title">Receita 7</span>
+                    <div class="recipe-favorites">
+                        <img src="icones/estrela.svg" alt="Favorito" class="star-icon">
+                        <span class="ico">89</span>
+                    </div>
+                </div>
+                <input type="file" id="arquivo-3" name="arquivo" class="file-input">
+            </div>
+
+            <div class="recipe-card">
+                <img src="receitas/receita8.jpg" alt="">
+                <div class="recipe-info">
+                    <span class="recipe-title">Receita 8</span>
+                    <div class="recipe-favorites">
+                        <img src="icones/estrela.svg" alt="Favorito" class="star-icon">
+                        <span class="fav-count">89</span>
+                    </div>
+                </div>
+                <input type="file" id="arquivo-3" name="arquivo" class="file-input">
+            </div>
+
+            <div class="recipe-card">
+                <img src="receitas/receita9.jpg" alt="">
+                <div class="recipe-info">
+                    <span class="recipe-title">Receita 9</span>
+                    <div class="recipe-favorites">
+                        <img src="icones/estrela.svg" alt="Favorito" class="star-icon">
+                        <span class="fav-count">89</span>
+                    </div>
+                </div>
+                <input type="file" id="arquivo-3" name="arquivo" class="file-input">
+            </div>
+
+        </div>
+    </main>
+
+    <div class="modal-overlay">
+        <div class="modal-content">
+            <h3>Autenticação</h3>
+            <p>Faça login na sua conta SAEPChef</p>
+            <input type="text" placeholder="Usuário">
+            <input type="password" placeholder="Senha">
+            <div class="modal-buttons">
+                <button class="btn-submit-login">Entrar</button>
+                <label for="modal-controle" class="btn-close-label">Fechar</label>
+            </div>
+        </div>
+    </div>
+
+        <script src="script.js"></script>
+    </div>
+</body>
+</html>
