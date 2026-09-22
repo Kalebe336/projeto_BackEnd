@@ -3,165 +3,228 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image/png" href="img/aa5e27436f6f22dc229b21f4f152198f-icone-plano-frontal-de-chapeu-de-chef.webp">
-    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/png" href="anexos/imagens_usuarios/images.png">
+    <link rel="stylesheet" href="css/style.css">
     <title>SaepChef</title>
 </head>
 <body>
-    <input type="checkbox" id="modal-controle" class="modal-toggle">
 
-     <header class="header">
+    <header class="header">
         <div class="user-section">
-            <div class="profile-pic" img src="imagens_usuarios/saepChef.jpg" alt=""></div>
-            <span class="username">@SAEPChef</span>
-            <button class="btn-profile" disabled>Ver Perfil</button>
+            <div class="profile-pic" id="profile-pic"></div>
+            <span class="username" id="display-username">@SAEPChef</span>
+            <button class="btn-profile" id="btn-profile" disabled>Ver Perfil</button>
         </div>
 
         <div class="company-section">
             <h1>SAEPChef</h1>
         </div>
 
-        <div class="login-section">
-            <label for="modal-controle" class="btn-login-label">Login</label>
+        <div id="login-section">
+            <button type="button" class="btn-login" id="btn-open-login">Login</button>
         </div>
     </header>
 
     <main class="main-container">
         
         <div class="search-container">
-            <input type="text" class="search-input" placeholder="Digite o nome do chef... ex: @chef1">
-            <img src="icones/lupa.svg" alt="Buscar" class="search-icon">
+            <input type="text" class="search-input" id="search-input" placeholder="Digite o nome do chef... ex: @chef1">
+            <img src="svg/icones/lupa.svg" alt="Buscar" class="search-icon" id="search-icon">
         </div>
 
-        <h2 class="section-title"></h2>
+        <h2 class="section-title" id="section-title"></h2>
 
-        <div class="grid-recipes">
+        <div class="grid-recipes" id="grid-recipes">
             
-            <div class="recipe-card">
-                <img src="receitas/receita1.jpg" alt="">
+            <div class="recipe-card" data-chef="@chef1" data-origem="Itália">
+                <img src="receitas/receita1.jpg" alt="Receita 1">
                 <div class="recipe-info">
                     <span class="recipe-title">Receita 1</span>
                     <div class="recipe-favorites">
-                        <img src="icones/estrela.svg" alt="Favorito" class="star-icon">
+                        <img src="svg/icones/estrela.svg" alt="Favorito" class="star-icon">
                         <span class="fav-count">12</span>
                     </div>
                 </div>
-                <input type="file" id="arquivo-1" name="arquivo" class="file-input">
             </div>
 
-            <div class="recipe-card">
-                <img src="receitas/receita2.jpg" alt="">
+            <div class="recipe-card" data-chef="@chef2" data-origem="França">
+                <img src="receitas/receita2.jpg" alt="Receita 2">
                 <div class="recipe-info">
                     <span class="recipe-title">Receita 2</span>
                     <div class="recipe-favorites">
-                        <img src="icones/estrela.svg" alt="Favorito" class="star-icon">
+                        <img src="svg/icones/estrela.svg" alt="Favorito" class="star-icon">
                         <span class="fav-count">45</span>
                     </div>
                 </div>
-                <input type="file" id="arquivo-2" name="arquivo" class="file-input">
             </div>
 
-            <div class="recipe-card">
-                <img src="receitas/receita3.jpg" alt="">
+            <div class="recipe-card" data-chef="@chef3" data-origem="Brasil">
+                <img src="receitas/receita3.jpg" alt="Receita 3">
                 <div class="recipe-info">
                     <span class="recipe-title">Receita 3</span>
                     <div class="recipe-favorites">
-                        <img src="icones/estrela.svg" alt="Favorito" class="star-icon">
+                        <img src="svg/icones/estrela.svg" alt="Favorito" class="star-icon">
                         <span class="fav-count">89</span>
                     </div>
                 </div>
-                <input type="file" id="arquivo-3" name="arquivo" class="file-input">
             </div>
 
-            <div class="recipe-card">
-                <img src="receitas/receita4.jpg" alt="">
+            <div class="recipe-card" data-chef="@chef1" data-origem="Japão">
+                <img src="receitas/receita4.jpg" alt="Receita 4">
                 <div class="recipe-info">
                     <span class="recipe-title">Receita 4</span>
                     <div class="recipe-favorites">
-                        <img src="icones/estrela.svg" alt="Favorito" class="star-icon">
+                        <img src="svg/icones/estrela.svg" alt="Favorito" class="star-icon">
                         <span class="fav-count">89</span>
                     </div>
                 </div>
-                <input type="file" id="arquivo-3" name="arquivo" class="file-input">
             </div>
 
-            <div class="recipe-card">
-                <img src="receitas/receita5.jpg" alt="">
+            <div class="recipe-card" data-chef="@chef4" data-origem="México">
+                <img src="receitas/receita5.jpg" alt="Receita 5">
                 <div class="recipe-info">
                     <span class="recipe-title">Receita 5</span>
                     <div class="recipe-favorites">
-                        <img src="icones/estrela.svg" alt="Favorito" class="star-icon">
+                        <img src="svg/icones/estrela.svg" alt="Favorito" class="star-icon">
                         <span class="fav-count">89</span>
                     </div>
                 </div>
-                <input type="file" id="arquivo-3" name="arquivo" class="file-input">
             </div>
 
-            <div class="recipe-card">
-                <img src="receitas/receita6.jpg" alt="">
+            <div class="recipe-card" data-chef="@chef2" data-origem="Espanha">
+                <img src="receitas/receita6.jpg" alt="Receita 6">
                 <div class="recipe-info">
                     <span class="recipe-title">Receita 6</span>
                     <div class="recipe-favorites">
-                        <img src="icones/estrela.svg" alt="Favorito" class="star-icon">
+                        <img src="svg/icones/estrela.svg" alt="Favorito" class="star-icon">
                         <span class="fav-count">89</span>
                     </div>
                 </div>
-                <input type="file" id="arquivo-3" name="arquivo" class="file-input">
             </div>
 
-            <div class="recipe-card">
-                <img src="receitas/receita7.jpg" alt="receitas">
+            <div class="recipe-card" data-chef="@chef3" data-origem="Itália">
+                <img src="receitas/receita7.jpg" alt="Receita 7">
                 <div class="recipe-info">
                     <span class="recipe-title">Receita 7</span>
                     <div class="recipe-favorites">
-                        <img src="icones/estrela.svg" alt="Favorito" class="star-icon">
-                        <span class="ico">89</span>
+                        <img src="svg/icones/estrela.svg" alt="Favorito" class="star-icon">
+                        <span class="fav-count">89</span>
                     </div>
                 </div>
-                <input type="file" id="arquivo-3" name="arquivo" class="file-input">
             </div>
 
-            <div class="recipe-card">
-                <img src="receitas/receita8.jpg" alt="">
+            <div class="recipe-card" data-chef="@chef5" data-origem="Peru">
+                <img src="receitas/receita8.jpg" alt="Receita 8">
                 <div class="recipe-info">
                     <span class="recipe-title">Receita 8</span>
                     <div class="recipe-favorites">
-                        <img src="icones/estrela.svg" alt="Favorito" class="star-icon">
+                        <img src="svg/icones/estrela.svg" alt="Favorito" class="star-icon">
                         <span class="fav-count">89</span>
                     </div>
                 </div>
-                <input type="file" id="arquivo-3" name="arquivo" class="file-input">
             </div>
 
-            <div class="recipe-card">
-                <img src="receitas/receita9.jpg" alt="">
+            <div class="recipe-card" data-chef="@chef1" data-origem="Brasil">
+                <img src="receitas/receita9.jpg" alt="Receita 9">
                 <div class="recipe-info">
                     <span class="recipe-title">Receita 9</span>
                     <div class="recipe-favorites">
-                        <img src="icones/estrela.svg" alt="Favorito" class="star-icon">
+                        <img src="svg/icones/estrela.svg" alt="Favorito" class="star-icon">
                         <span class="fav-count">89</span>
                     </div>
                 </div>
-                <input type="file" id="arquivo-3" name="arquivo" class="file-input">
             </div>
 
         </div>
     </main>
 
-    <div class="modal-overlay">
-        <div class="modal-content">
-            <h3>Autenticação</h3>
-            <p>Faça login na sua conta SAEPChef</p>
-            <input type="text" placeholder="Usuário">
-            <input type="password" placeholder="Senha">
-            <div class="modal-buttons">
-                <button class="btn-submit-login">Entrar</button>
-                <label for="modal-controle" class="btn-close-label">Fechar</label>
+    <footer class="footer">
+        <div class="footer-company">SAEPChef</div>
+        <div class="footer-socials">
+            <img src="svg/icones/instagram.svg" alt="Instagram">
+            <img src="svg/icones/tiktok.svg" alt="TikTok">
+            <img src="svg/icones/linkedin.svg" alt="LinkedIn">
+            <img src="svg/icones/youtube.svg" alt="YouTube">
+        </div>
+        <div class="footer-copyright">Copyright 2026-2027</div>
+    </footer>
+
+    <!-- Overlay da Sidebar do Perfil -->
+    <div class="sidebar-overlay" id="sidebar-overlay"></div>
+
+    <!-- Menu Lateral (Sidebar do Chef) -->
+    <aside class="profile-sidebar" id="profile-sidebar">
+        <div class="sidebar-header">
+            <button class="btn-close-sidebar" id="btn-close-sidebar" aria-label="Fechar">&times;</button>
+        </div>
+
+        <div class="sidebar-user-info">
+            <div class="sidebar-avatar" id="sidebar-avatar">
+                <img src="anexos/imagens_usuarios/saepChef.jpg" id="sidebar-user-img" alt="Foto do Usuário">
             </div>
+            <h3 class="sidebar-name" id="sidebar-name">Nome do Chef</h3>
+            <span class="sidebar-handle" id="sidebar-handle">@chef1</span>
+        </div>
+
+        <div class="sidebar-stats">
+            <div class="stat-box">
+                <span class="stat-number" id="sidebar-fav-count">0</span>
+                <span class="stat-label">Favoritos</span>
+            </div>
+            <div class="stat-box">
+                <span class="stat-number" id="sidebar-recipes-count">0</span>
+                <span class="stat-label">Receitas</span>
+            </div>
+        </div>
+
+        <div class="sidebar-actions">
+            <button type="button" class="btn-user-recipes" id="btn-user-recipes">Suas receitas</button>
+            <button type="button" class="btn-logout" id="btn-logout">Logout</button>
+        </div>
+    </aside>
+
+    <!-- Modal de Autenticação -->
+    <div class="modal-overlay" id="modal-auth-overlay" style="display: none;">
+        <div class="modal-auth" id="modal-auth">
+            <button type="button" class="btn-close-modal" id="btn-close-modal">&times;</button>
+            
+            <div class="auth-tabs">
+                <button type="button" class="tab-btn active" id="tab-login">Entrar</button>
+                <button type="button" class="tab-btn" id="tab-register">Cadastrar</button>
+            </div>
+
+            <form id="form-login" class="auth-form active">
+                <h2>Acessar Conta</h2>
+                <div class="form-group">
+                    <label for="login-email">E-mail ou Usuário</label>
+                    <input type="text" id="login-email" placeholder="seu@email.com ou @usuario" required>
+                </div>
+                <div class="form-group">
+                    <label for="login-password">Senha</label>
+                    <input type="password" id="login-password" placeholder="Digite sua senha" required>
+                </div>
+                <button type="submit" class="btn-submit">Entrar</button>
+            </form>
+
+            <form id="form-register" class="auth-form" style="display: none;">
+                <h2>Criar Conta</h2>
+                <div class="form-group">
+                    <label for="reg-username">Nome de Usuário</label>
+                    <input type="text" id="reg-username" placeholder="@seuusuario" required>
+                </div>
+                <div class="form-group">
+                    <label for="reg-email">E-mail</label>
+                    <input type="email" id="reg-email" placeholder="seu@email.com" required>
+                </div>
+                <div class="form-group">
+                    <label for="reg-password">Senha</label>
+                    <input type="password" id="reg-password" placeholder="Crie uma senha" required>
+                </div>
+                <button type="submit" class="btn-submit">Cadastrar</button>
+            </form>
         </div>
     </div>
 
-        <script src="script.js"></script>
-    </div>
+    <script src="js/script.js"></script>
 </body>
 </html>
