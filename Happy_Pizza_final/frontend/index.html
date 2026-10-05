@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Pizza | Receitas</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<header class="topo">
+    <a class="marca" href="/">
+        <img src="img/logo.png" alt="Happy Pizza">
+        <span>Happy Pizza</span>
+    </a>
+    <nav>
+        <a href="#receitas">Receitas</a>
+        <button id="btnPublicar" class="btn btn-principal">+ Publicar receita</button>
+    </nav>
+</header>
+
+<main>
+    <section class="hero">
+        <div>
+            <span class="etiqueta">🍕 Comunidade de sabores</span>
+            <h1>Compartilhe aquela pizza que merece ser repetida.</h1>
+            <p>Publique receitas, descubra novos sabores e abra cada card para ver os ingredientes e o passo a passo completo.</p>
+            <button id="btnPublicarHero" class="btn btn-principal">Publicar minha receita</button>
+        </div>
+        <div class="hero-card">
+            <img src="img/logo.png" alt="">
+            <strong>Happy Pizza</strong>
+            <span>Receitas feitas por quem gosta de pizza de verdade.</span>
+        </div>
+    </section>
+
+    <section id="receitas" class="conteudo">
+        <div class="section-top">
+            <div>
+                <span class="etiqueta">Explore</span>
+                <h2>Receitas da comunidade</h2>
+            </div>
+            <div class="filtros">
+                <input id="busca" type="search" placeholder="Buscar pizza...">
+                <select id="filtroDificuldade">
+                    <option value="">Todas</option>
+                    <option value="Fácil">Fácil</option>
+                    <option value="Médio">Médio</option>
+                    <option value="Difícil">Difícil</option>
+                </select>
+            </div>
+        </div>
+        <div id="status" class="status">Carregando receitas...</div>
+        <div id="listaReceitas" class="grid"></div>
+    </section>
+</main>
+
+<div id="modalPublicar" class="modal">
+    <div class="modal-caixa grande">
+        <button class="fechar" data-fechar="modalPublicar">&times;</button>
+        <div class="modal-cabecalho">
+            <span class="etiqueta">Nova receita</span>
+            <h2>Publique sua pizza 🍕</h2>
+            <p>Preencha os dados abaixo. Ingredientes e passos devem ficar um por linha.</p>
+        </div>
+        <form id="formReceita">
+            <div class="form-grid">
+                <label>Título
+                    <input name="titulo" required placeholder="Ex.: Pizza de calabresa">
+                </label>
+                <label>Origem
+                    <input name="origem" value="Italiana" placeholder="Ex.: Brasileira">
+                </label>
+                <label>Tempo de preparo
+                    <input name="tempo_preparo" placeholder="Ex.: 1h 20min">
+                </label>
+                <label>Dificuldade
+                    <select name="dificuldade">
+                        <option>Fácil</option>
+                        <option>Médio</option>
+                        <option>Difícil</option>
+                    </select>
+                </label>
+                <label class="coluna-total">Imagem da pizza (URL)
+                    <input name="imagem" placeholder="https://...">
+                </label>
+                <label class="coluna-total">Descrição
+                    <textarea name="descricao" rows="3" placeholder="Conte um pouco sobre a receita..."></textarea>
+                </label>
+                <label>Ingredientes
+                    <textarea name="ingredientes" rows="8" required placeholder="500 g de farinha&#10;10 g de fermento&#10;300 ml de água&#10;..."></textarea>
+                </label>
+                <label>Modo de preparo
+                    <textarea name="modo_preparo" rows="8" required placeholder="Misture os ingredientes...&#10;Sove a massa...&#10;Asse..."></textarea>
+                </label>
+            </div>
+            <div class="form-acoes">
+                <button type="button" class="btn btn-secundario" data-fechar="modalPublicar">Cancelar</button>
+                <button class="btn btn-principal" type="submit">Publicar receita</button>
+            </div>
+        </form>
+    </div>
+</div>
+
+<div id="modalDetalhes" class="modal">
+    <div class="modal-caixa detalhes">
+        <button class="fechar" data-fechar="modalDetalhes">&times;</button>
+        <div id="detalhesReceita"></div>
+    </div>
+</div>
+
+<div id="toast" class="toast"></div>
+<script src="js/script.js"></script>
+</body>
+</html>
